@@ -1,1 +1,17 @@
 Adding bulk
+
+Step 2: Setup the PowerShell script
+The only thing that needs to be modified in the script is the path to the csv file, and the UserPrincableName.
+
+To modify the script just right click on the ps1 file and select edit. This will open the script in PowerShell ISE
+
+Modify this section to the correct path of your csv file.
+
+$ADUsers = Import-csv C:\it\Final_NewAccounts2.csv
+Now modify line 42 and change the domain
+
+-UserPrincipalName "$Username@winadpro.com"
+My domain is ad.activedirectorypro.com so I will update mine to
+
+-UserPrincipalName "$Username@ad.activedirectorypro.com"
+Save the changes and move on to step 3.
